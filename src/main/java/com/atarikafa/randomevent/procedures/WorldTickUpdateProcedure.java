@@ -34,7 +34,7 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 		AtarikafasRandomEventModVariables.WorldVariables
 				.get(world).event_second = (double) ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) / 20);
 		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
-		if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 0)) {
+		if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) <= 0)) {
 			AtarikafasRandomEventModVariables.WorldVariables
 					.get(world).event_timer = (double) (AtarikafasRandomEventModVariables.WorldVariables.get(world).timer_default);
 			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
