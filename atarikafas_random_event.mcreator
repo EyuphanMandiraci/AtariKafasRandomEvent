@@ -423,9 +423,8 @@
   "workspaceSettings": {
     "modid": "atarikafas_random_event",
     "modName": "AtariKafa\u0027s Random Event",
-    "version": "1.0.0",
-    "author": "thekralgame, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "version": "1.0",
+    "author": "thekralgame",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

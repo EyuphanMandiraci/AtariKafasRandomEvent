@@ -4,11 +4,11 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="atarikafas_random_event"
-version="1.0.0"
+version="1.0"
 displayName="AtariKafa's Random Event"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-authors="thekralgame, MCreator"
+authors="thekralgame"
 
 [[dependencies.atarikafas_random_event]]
     modId="minecraft"
