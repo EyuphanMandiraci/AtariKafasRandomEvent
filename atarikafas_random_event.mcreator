@@ -99,8 +99,8 @@
     {
       "name": "timer_default",
       "type": "number",
-      "scope": "map",
-      "value": "140.0"
+      "scope": "world",
+      "value": "200.0"
     }
   ],
   "sound_elements": [],

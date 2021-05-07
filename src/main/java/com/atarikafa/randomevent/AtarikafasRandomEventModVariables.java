@@ -50,6 +50,7 @@ public class AtarikafasRandomEventModVariables {
 		public boolean event_bad = false;
 		public double event_second = 0;
 		public double event_timer = 0;
+		public double timer_default = 200.0;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -63,6 +64,7 @@ public class AtarikafasRandomEventModVariables {
 			event_bad = nbt.getBoolean("event_bad");
 			event_second = nbt.getDouble("event_second");
 			event_timer = nbt.getDouble("event_timer");
+			timer_default = nbt.getDouble("timer_default");
 		}
 
 		@Override
@@ -70,6 +72,7 @@ public class AtarikafasRandomEventModVariables {
 			nbt.putBoolean("event_bad", event_bad);
 			nbt.putDouble("event_second", event_second);
 			nbt.putDouble("event_timer", event_timer);
+			nbt.putDouble("timer_default", timer_default);
 			return nbt;
 		}
 
@@ -92,7 +95,6 @@ public class AtarikafasRandomEventModVariables {
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "atarikafas_random_event_mapvars";
 		public String event = "";
-		public double timer_default = 140.0;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -104,13 +106,11 @@ public class AtarikafasRandomEventModVariables {
 		@Override
 		public void read(CompoundNBT nbt) {
 			event = nbt.getString("event");
-			timer_default = nbt.getDouble("timer_default");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
 			nbt.putString("event", event);
-			nbt.putDouble("timer_default", timer_default);
 			return nbt;
 		}
 

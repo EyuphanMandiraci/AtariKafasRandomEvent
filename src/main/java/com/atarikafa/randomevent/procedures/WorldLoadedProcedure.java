@@ -28,7 +28,7 @@ public class WorldLoadedProcedure extends AtarikafasRandomEventModElements.ModEl
 		}
 		IWorld world = (IWorld) dependencies.get("world");
 		AtarikafasRandomEventModVariables.WorldVariables
-				.get(world).event_timer = (double) (AtarikafasRandomEventModVariables.MapVariables.get(world).timer_default);
+				.get(world).event_timer = (double) (AtarikafasRandomEventModVariables.WorldVariables.get(world).timer_default);
 		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 	}
 
