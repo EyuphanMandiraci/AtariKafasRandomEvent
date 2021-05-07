@@ -223,6 +223,12 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				}
 			}
 		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().func_232641_a_(new StringTextComponent(("" + ((AtarikafasRandomEventModVariables.timer_default)))),
+						ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
 	}
 
 	@SubscribeEvent
