@@ -56,6 +56,7 @@ public class EventShowCommand extends AtarikafasRandomEventModElements.ModElemen
 		});
 		{
 			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("cmdparams", cmdparams);
 			$_dependencies.put("world", world);
 			EventShowCommandExecutedProcedure.executeProcedure($_dependencies);
 		}

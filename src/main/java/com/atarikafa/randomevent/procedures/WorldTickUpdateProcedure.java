@@ -40,34 +40,11 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 			AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad = (boolean) ((new Random()).nextBoolean());
 			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private IWorld world;
-				public void start(IWorld world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					if ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad)) {
-						System.out.println("Bad!");
-					} else if ((!(AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad))) {
-						System.out.println("Good!");
-					}
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, (int) 5);
+			if ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad)) {
+				System.out.println("Bad!");
+			} else if ((!(AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad))) {
+				System.out.println("Good!");
+			}
 		}
 	}
 
