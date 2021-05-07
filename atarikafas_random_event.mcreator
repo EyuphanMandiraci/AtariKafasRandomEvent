@@ -45,36 +45,6 @@
       }
     },
     {
-      "name": "EventShowCommandExecuted",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "event_show_command_executed",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "cmdparams",
-            "type": "map"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "EventShow",
-      "type": "command",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "event_show"
-    },
-    {
       "name": "LavaCeiling",
       "type": "procedure",
       "sortid": 5,
