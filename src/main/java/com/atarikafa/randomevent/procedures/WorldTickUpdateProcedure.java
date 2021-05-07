@@ -35,8 +35,13 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 		AtarikafasRandomEventModVariables.WorldVariables
 				.get(world).event_second = (double) ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) / 20);
 		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad = (boolean) ((new Random()).nextBoolean());
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+		if ((Math.random() < 0.7)) {
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad = (boolean) (true);
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+		} else {
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad = (boolean) (false);
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+		}
 		if ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_bad)) {
 			event_number = (double) ((new Random()).nextInt((int) 7 + 1));
 			if (((event_number) == 0)) {

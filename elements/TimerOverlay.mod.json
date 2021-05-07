@@ -9,11 +9,11 @@
         "data": {
           "text": "<VAR:integer:event_second>",
           "color": {
-            "value": -12829636,
+            "value": -3407872,
             "falpha": 0.0
           },
           "name": "<VAR:integer:event_second>",
-          "x": 195,
+          "x": 209,
           "y": 98
         }
       }

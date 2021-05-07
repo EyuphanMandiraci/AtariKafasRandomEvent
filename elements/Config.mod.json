@@ -1,0 +1,53 @@
+{
+  "_fv": 17,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 161,
+    "height": 85,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Timer",
+          "width": 120,
+          "height": 20,
+          "name": "timer",
+          "x": 152,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Save",
+          "onClick": {
+            "name": "Save"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Save",
+          "x": 191,
+          "y": 132
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Now: <VAR:integer:event_second>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Now: <VAR:integer:event_second>",
+          "x": 184,
+          "y": 112
+        }
+      }
+    ]
+  }
+}
