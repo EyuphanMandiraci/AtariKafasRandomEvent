@@ -104,7 +104,7 @@
       "name": "timer_default",
       "type": "number",
       "scope": "world",
-      "value": "1800.0"
+      "value": "800.0"
     }
   ],
   "sound_elements": [],
