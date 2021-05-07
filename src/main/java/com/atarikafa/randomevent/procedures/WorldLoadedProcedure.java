@@ -1,7 +1,9 @@
 package com.atarikafa.randomevent.procedures;
 
+import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
@@ -9,6 +11,14 @@ import net.minecraft.entity.Entity;
 
 import java.util.Map;
 import java.util.HashMap;
+
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.File;
+import java.io.BufferedReader;
+
+import com.google.gson.JsonObject;
+import com.google.gson.Gson;
 
 import com.atarikafa.randomevent.AtarikafasRandomEventModVariables;
 import com.atarikafa.randomevent.AtarikafasRandomEventModElements;
@@ -28,8 +38,55 @@ public class WorldLoadedProcedure extends AtarikafasRandomEventModElements.ModEl
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer = (double) (AtarikafasRandomEventModVariables.timer_default);
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+		File dosya = new File(FMLPaths.GAMEDIR.get().toString(), File.separator + "re.json");
+		{
+			try {
+				BufferedReader dosyaReader = new BufferedReader(new FileReader(dosya));
+				StringBuilder jsonstringbuilder = new StringBuilder();
+				String line;
+				while ((line = dosyaReader.readLine()) != null) {
+					jsonstringbuilder.append(line);
+				}
+				dosyaReader.close();
+				JsonObject re = new Gson().fromJson(jsonstringbuilder.toString(), JsonObject.class);
+				AtarikafasRandomEventModVariables.timer_default = (double) new Object() {
+					int convert(String s) {
+						try {
+							return Integer.parseInt(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(re.get("timer").getAsString());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		new Object() {
+			private int ticks = 0;
+			private float waitTicks;
+			private IWorld world;
+			public void start(IWorld world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
+				this.world = world;
+			}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
+						run();
+				}
+			}
+
+			private void run() {
+				AtarikafasRandomEventModVariables.WorldVariables.get(world).event_second = (double) (AtarikafasRandomEventModVariables.timer_default);
+				AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+				MinecraftForge.EVENT_BUS.unregister(this);
+			}
+		}.start(world, (int) 5);
 	}
 
 	@SubscribeEvent
