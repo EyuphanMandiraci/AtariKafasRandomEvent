@@ -50,7 +50,7 @@ public class EventShowCommandExecutedProcedure extends AtarikafasRandomEventModE
 				return "";
 			}
 		}.getText())).equals(" ")))) {
-			AtarikafasRandomEventModVariables.WorldVariables.get(world).timer_default = (double) new Object() {
+			AtarikafasRandomEventModVariables.timer_default = (double) new Object() {
 				int convert(String s) {
 					try {
 						return Integer.parseInt(s.trim());
@@ -67,7 +67,6 @@ public class EventShowCommandExecutedProcedure extends AtarikafasRandomEventModE
 					return "";
 				}
 			}.getText()));
-			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 		}
 	}
 }

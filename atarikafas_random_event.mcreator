@@ -421,10 +421,6 @@
           {
             "name": "guistate",
             "type": "map"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -504,7 +500,7 @@
     {
       "name": "timer_default",
       "type": "number",
-      "scope": "world",
+      "scope": "global",
       "value": "800.0"
     }
   ],

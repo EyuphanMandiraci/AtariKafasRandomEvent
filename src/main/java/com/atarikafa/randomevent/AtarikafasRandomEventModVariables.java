@@ -21,7 +21,7 @@ public class AtarikafasRandomEventModVariables {
 		elements.addNetworkMessage(WorldSavedDataSyncMessage.class, WorldSavedDataSyncMessage::buffer, WorldSavedDataSyncMessage::new,
 				WorldSavedDataSyncMessage::handler);
 	}
-
+	public static double timer_default = 800.0;
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.getPlayer().world.isRemote()) {
@@ -50,7 +50,6 @@ public class AtarikafasRandomEventModVariables {
 		public boolean event_bad = false;
 		public double event_second = 0;
 		public double event_timer = 0;
-		public double timer_default = 800.0;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -64,7 +63,6 @@ public class AtarikafasRandomEventModVariables {
 			event_bad = nbt.getBoolean("event_bad");
 			event_second = nbt.getDouble("event_second");
 			event_timer = nbt.getDouble("event_timer");
-			timer_default = nbt.getDouble("timer_default");
 		}
 
 		@Override
@@ -72,7 +70,6 @@ public class AtarikafasRandomEventModVariables {
 			nbt.putBoolean("event_bad", event_bad);
 			nbt.putDouble("event_second", event_second);
 			nbt.putDouble("event_timer", event_timer);
-			nbt.putDouble("timer_default", timer_default);
 			return nbt;
 		}
 
