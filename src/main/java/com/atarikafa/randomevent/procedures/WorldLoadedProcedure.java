@@ -3,7 +3,6 @@ package com.atarikafa.randomevent.procedures;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
@@ -62,31 +61,8 @@ public class WorldLoadedProcedure extends AtarikafasRandomEventModElements.ModEl
 				e.printStackTrace();
 			}
 		}
-		new Object() {
-			private int ticks = 0;
-			private float waitTicks;
-			private IWorld world;
-			public void start(IWorld world, int waitTicks) {
-				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
-				this.world = world;
-			}
-
-			@SubscribeEvent
-			public void tick(TickEvent.ServerTickEvent event) {
-				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
-						run();
-				}
-			}
-
-			private void run() {
-				AtarikafasRandomEventModVariables.WorldVariables.get(world).event_second = (double) (AtarikafasRandomEventModVariables.timer_default);
-				AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
-				MinecraftForge.EVENT_BUS.unregister(this);
-			}
-		}.start(world, (int) 5);
+		AtarikafasRandomEventModVariables.WorldVariables.get(world).event_second = (double) (AtarikafasRandomEventModVariables.timer_default);
+		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 	}
 
 	@SubscribeEvent
