@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "overlay",
   "definition": {
     "priority": "HIGHEST",
@@ -9,12 +9,12 @@
         "data": {
           "text": "<VAR:integer:event_second>",
           "color": {
-            "value": -12829636,
+            "value": -3407872,
             "falpha": 0.0
           },
           "name": "<VAR:integer:event_second>",
-          "x": 195,
-          "y": 98
+          "x": 209,
+          "y": 97
         }
       }
     ],

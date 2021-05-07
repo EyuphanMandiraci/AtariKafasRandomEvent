@@ -50,7 +50,7 @@ public class AtarikafasRandomEventModVariables {
 		public boolean event_bad = false;
 		public double event_second = 0;
 		public double event_timer = 0;
-		public double timer_default = 800.0;
+		public double timer_default = 1800.0;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
