@@ -75,7 +75,7 @@ public class ConfigGuiWindow extends ContainerScreen<ConfigGui.GuiContainerMod> 
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Now: " + (int) (AtarikafasRandomEventModVariables.WorldVariables.get(world).event_second) + "", 51, 34, -12829636);
+		this.font.drawString(ms, "Now: " + (int) (AtarikafasRandomEventModVariables.WorldVariables.get(world).timer_default) + "", 51, 34, -12829636);
 	}
 
 	@Override

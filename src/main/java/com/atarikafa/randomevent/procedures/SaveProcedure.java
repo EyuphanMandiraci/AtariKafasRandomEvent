@@ -37,7 +37,7 @@ public class SaveProcedure extends AtarikafasRandomEventModElements.ModElement {
 		Entity entity = (Entity) dependencies.get("entity");
 		HashMap guistate = (HashMap) dependencies.get("guistate");
 		IWorld world = (IWorld) dependencies.get("world");
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer = (double) (new Object() {
+		AtarikafasRandomEventModVariables.WorldVariables.get(world).timer_default = (double) (new Object() {
 			int convert(String s) {
 				try {
 					return Integer.parseInt(s.trim());
