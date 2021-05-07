@@ -17,6 +17,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.GsonBuilder;
 import com.google.gson.Gson;
 
+import com.atarikafa.randomevent.AtarikafasRandomEventModVariables;
 import com.atarikafa.randomevent.AtarikafasRandomEventModElements;
 import com.atarikafa.randomevent.AtarikafasRandomEventMod;
 
@@ -67,6 +68,23 @@ public class SaveProcedure extends AtarikafasRandomEventModElements.ModElement {
 				exception.printStackTrace();
 			}
 		}
+		AtarikafasRandomEventModVariables.timer_default = (double) new Object() {
+			int convert(String s) {
+				try {
+					return Integer.parseInt(s.trim());
+				} catch (Exception e) {
+				}
+				return 0;
+			}
+		}.convert((new Object() {
+			public String getText() {
+				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:timer");
+				if (textField != null) {
+					return textField.getText();
+				}
+				return "";
+			}
+		}.getText()));
 		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).closeScreen();
 	}

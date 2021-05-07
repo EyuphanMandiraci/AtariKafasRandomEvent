@@ -38,12 +38,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Now: <VAR:integer:timer_default>",
+          "text": "Now: <VAR:integer:timer_default/20>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Now: <VAR:integer:timer_default>",
+          "name": "Now: <VAR:integer:timer_default/20>",
           "x": 184,
           "y": 112
         }
