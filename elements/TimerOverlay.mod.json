@@ -7,13 +7,13 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:integer:event_timer>",
+          "text": "<VAR:integer:event_second>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<VAR:integer:event_timer>",
-          "x": 204,
+          "name": "<VAR:integer:event_second>",
+          "x": 195,
           "y": 98
         }
       }

@@ -1,10 +1,11 @@
 package com.atarikafa.randomevent.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.entity.Entity;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -33,10 +34,14 @@ public class WorldLoadedProcedure extends AtarikafasRandomEventModElements.ModEl
 	}
 
 	@SubscribeEvent
-	public void onWorldLoad(WorldEvent.Load event) {
-		IWorld world = event.getWorld();
+	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+		Entity entity = event.getPlayer();
 		Map<String, Object> dependencies = new HashMap<>();
-		dependencies.put("world", world);
+		dependencies.put("x", entity.getPosX());
+		dependencies.put("y", entity.getPosY());
+		dependencies.put("z", entity.getPosZ());
+		dependencies.put("world", entity.world);
+		dependencies.put("entity", entity);
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}

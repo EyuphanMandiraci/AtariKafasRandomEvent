@@ -39,7 +39,8 @@ public class TimerOverlayOverlay extends AtarikafasRandomEventModElements.ModEle
 			double z = entity.getPosZ();
 			if (true) {
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"" + (int) (AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) + "", posX + -9, posY + -22, -12829636);
+						"" + (int) (AtarikafasRandomEventModVariables.WorldVariables.get(world).event_second) + "", posX + -18, posY + -22,
+						-12829636);
 			}
 		}
 	}
