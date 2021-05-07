@@ -1,0 +1,146 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "WorldTickUpdate",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "world_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TimerOverlay",
+      "type": "overlay",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "timer_overlay"
+    },
+    {
+      "name": "WorldLoaded",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "world_loaded",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EventShowCommandExecuted",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "event_show_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EventShow",
+      "type": "command",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "event_show"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "event",
+      "type": "string",
+      "scope": "map",
+      "value": ""
+    },
+    {
+      "name": "event_bad",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "event_second",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "event_timer",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "timer_default",
+      "type": "number",
+      "scope": "map",
+      "value": "140.0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Eventler",
+        "children": [
+          {
+            "name": "Good",
+            "children": []
+          },
+          {
+            "name": "Bad",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "atarikafas_random_event",
+    "modName": "AtariKafa\u0027s Random Event",
+    "version": "1.0.0",
+    "author": "thekralgame, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "com.atarikafa.randomevent",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100112313
+}
