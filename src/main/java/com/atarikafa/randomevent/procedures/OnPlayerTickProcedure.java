@@ -63,7 +63,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 0)) {
+		if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 1)) {
 			if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("lava_ceiling"))) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
@@ -222,19 +222,6 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 								Util.DUMMY_UUID);
 				}
 			}
-		}
-		if (!world.isRemote()) {
-			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-			if (mcserv != null)
-				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((AtarikafasRandomEventModVariables.MapVariables.get(world).event)),
-						ChatType.SYSTEM, Util.DUMMY_UUID);
-		}
-		if (!world.isRemote()) {
-			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-			if (mcserv != null)
-				mcserv.getPlayerList().func_232641_a_(
-						new StringTextComponent(("" + ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer)))), ChatType.SYSTEM,
-						Util.DUMMY_UUID);
 		}
 	}
 
