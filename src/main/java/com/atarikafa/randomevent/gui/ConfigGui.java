@@ -180,7 +180,6 @@ public class ConfigGui extends AtarikafasRandomEventModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("guistate", guistate);
-				$_dependencies.put("world", world);
 				SaveProcedure.executeProcedure($_dependencies);
 			}
 		}

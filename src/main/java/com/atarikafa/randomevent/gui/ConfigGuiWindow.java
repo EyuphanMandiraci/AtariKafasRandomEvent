@@ -1,8 +1,6 @@
 
 package com.atarikafa.randomevent.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -17,6 +15,7 @@ import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 import com.atarikafa.randomevent.AtarikafasRandomEventModVariables;
@@ -48,12 +47,15 @@ public class ConfigGuiWindow extends ContainerScreen<ConfigGui.GuiContainerMod> 
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float par1, int par2, int par3) {
-		GL11.glColor4f(1, 1, 1, 1);
+	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float partialTicks, int gx, int gy) {
+		RenderSystem.color4f(1, 1, 1, 1);
+		RenderSystem.enableBlend();
+		RenderSystem.defaultBlendFunc();
 		Minecraft.getInstance().getTextureManager().bindTexture(texture);
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		RenderSystem.disableBlend();
 	}
 
 	@Override
@@ -114,8 +116,10 @@ public class ConfigGuiWindow extends ContainerScreen<ConfigGui.GuiContainerMod> 
 		timer.setMaxStringLength(32767);
 		this.children.add(this.timer);
 		this.addButton(new Button(this.guiLeft + 58, this.guiTop + 54, 45, 20, new StringTextComponent("Save"), e -> {
-			AtarikafasRandomEventMod.PACKET_HANDLER.sendToServer(new ConfigGui.ButtonPressedMessage(0, x, y, z));
-			ConfigGui.handleButtonAction(entity, 0, x, y, z);
+			if (true) {
+				AtarikafasRandomEventMod.PACKET_HANDLER.sendToServer(new ConfigGui.ButtonPressedMessage(0, x, y, z));
+				ConfigGui.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 	}
 }

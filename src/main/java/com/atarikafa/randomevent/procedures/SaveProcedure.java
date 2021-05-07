@@ -1,5 +1,7 @@
 package com.atarikafa.randomevent.procedures;
 
+import net.minecraftforge.fml.loading.FMLPaths;
+
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.widget.TextFieldWidget;
@@ -7,7 +9,14 @@ import net.minecraft.client.gui.widget.TextFieldWidget;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.atarikafa.randomevent.AtarikafasRandomEventModVariables;
+import java.io.IOException;
+import java.io.FileWriter;
+import java.io.File;
+
+import com.google.gson.JsonObject;
+import com.google.gson.GsonBuilder;
+import com.google.gson.Gson;
+
 import com.atarikafa.randomevent.AtarikafasRandomEventModElements;
 import com.atarikafa.randomevent.AtarikafasRandomEventMod;
 
@@ -30,23 +39,34 @@ public class SaveProcedure extends AtarikafasRandomEventModElements.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		HashMap guistate = (HashMap) dependencies.get("guistate");
-		AtarikafasRandomEventModVariables.timer_default = (double) (new Object() {
-			int convert(String s) {
-				try {
-					return Integer.parseInt(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
+		File dosya = new File(FMLPaths.GAMEDIR.get().toString(), File.separator + "re.json");
+		if (!dosya.exists()) {
+			try {
+				dosya.createNewFile();
+			} catch (IOException exception) {
+				exception.printStackTrace();
 			}
-		}.convert((new Object() {
-			public String getText() {
-				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:timer");
-				if (textField != null) {
-					return textField.getText();
+		}
+		{
+			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+			JsonObject re = new JsonObject();
+			re.addProperty("timer", (new Object() {
+				public String getText() {
+					TextFieldWidget textField = (TextFieldWidget) guistate.get("text:timer");
+					if (textField != null) {
+						return textField.getText();
+					}
+					return "";
 				}
-				return "";
+			}.getText()));
+			try {
+				FileWriter dosyafw = new FileWriter(dosya);
+				dosyafw.write(mainGSONBuilderVariable.toJson(re));
+				dosyafw.close();
+			} catch (IOException exception) {
+				exception.printStackTrace();
 			}
-		}.getText())) * 20);
+		}
 		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).closeScreen();
 	}
