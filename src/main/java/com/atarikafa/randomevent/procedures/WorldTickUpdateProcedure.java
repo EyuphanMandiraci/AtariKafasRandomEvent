@@ -50,7 +50,7 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 					AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "zombie_raid";
 					AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 				} else if (((event_number) == 2)) {
-					AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "water_sufffocate";
+					AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "water_suffocate";
 					AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 				} else if (((event_number) == 3)) {
 					AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "block_suffocate";
