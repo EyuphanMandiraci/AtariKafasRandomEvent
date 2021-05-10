@@ -491,6 +491,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "FallDamage",
+      "type": "potion",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fall_damage"
     }
   ],
   "variable_elements": [
@@ -528,11 +537,16 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.minecraft.potion.effect.fall_damage": "Fall Damage",
       "effect.protection": "Protection",
+      "item.minecraft.splash_potion.effect.fall_damage": "Splash Fall Damage",
       "item.minecraft.potion.effect.protection": "Protection",
+      "item.minecraft.tipped_arrow.effect.fall_damage": "Arrow of Fall Damage",
       "item.minecraft.splash_potion.effect.protection": "Splash Protection",
       "item.minecraft.lingering_potion.effect.protection": "Lingering Protection",
-      "item.minecraft.tipped_arrow.effect.protection": "Arrow of Protection"
+      "effect.fall_damage": "Fall Damage",
+      "item.minecraft.tipped_arrow.effect.protection": "Arrow of Protection",
+      "item.minecraft.lingering_potion.effect.fall_damage": "Lingering Fall Damage"
     }
   },
   "foldersRoot": {

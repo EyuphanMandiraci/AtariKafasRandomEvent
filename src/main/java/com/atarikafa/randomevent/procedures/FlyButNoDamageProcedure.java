@@ -1,19 +1,12 @@
 package com.atarikafa.randomevent.procedures;
 
-import net.minecraftforge.fml.loading.FMLPaths;
-
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
 
-import java.io.IOException;
-import java.io.FileWriter;
-import java.io.File;
-
-import com.google.gson.JsonObject;
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
+import com.atarikafa.randomevent.potion.FallDamagePotion;
 import com.atarikafa.randomevent.AtarikafasRandomEventModElements;
 import com.atarikafa.randomevent.AtarikafasRandomEventMod;
 
@@ -30,26 +23,8 @@ public class FlyButNoDamageProcedure extends AtarikafasRandomEventModElements.Mo
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.setMotion(0, 1, 0);
-		File dosya = new File(FMLPaths.GAMEDIR.get().toString(), File.separator + (((entity.getDisplayName().getString())) + "" + (".json")));
-		if (!dosya.exists()) {
-			try {
-				dosya.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-		}
-		{
-			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
-			JsonObject gson = new JsonObject();
-			gson.addProperty("fall_damage", (false));
-			try {
-				FileWriter dosyafw = new FileWriter(dosya);
-				dosyafw.write(mainGSONBuilderVariable.toJson(gson));
-				dosyafw.close();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-		}
+		entity.setMotion(0, 10, 0);
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(FallDamagePotion.potion, (int) 10000000, (int) 1, (false), (false)));
 	}
 }

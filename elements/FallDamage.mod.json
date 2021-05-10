@@ -1,0 +1,19 @@
+{
+  "_fv": 18,
+  "_type": "potion",
+  "definition": {
+    "name": "Fall Damage",
+    "effectName": "Fall Damage",
+    "icon": "resistance_je2_be2.png",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "registerPotionType": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false
+  }
+}

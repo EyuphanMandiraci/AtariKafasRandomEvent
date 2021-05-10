@@ -1,27 +1,20 @@
 package com.atarikafa.randomevent.procedures;
 
-import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collection;
 
-import java.io.IOException;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.io.File;
-import java.io.BufferedReader;
-
-import com.google.gson.JsonObject;
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
+import com.atarikafa.randomevent.potion.FallDamagePotion;
 import com.atarikafa.randomevent.AtarikafasRandomEventModElements;
 import com.atarikafa.randomevent.AtarikafasRandomEventMod;
 
@@ -39,41 +32,28 @@ public class WhenEntityFallsProcedure extends AtarikafasRandomEventModElements.M
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		File dosya = new File(FMLPaths.GAMEDIR.get().toString(), File.separator + (((entity.getDisplayName().getString())) + "" + (".json")));
-		{
-			try {
-				BufferedReader dosyaReader = new BufferedReader(new FileReader(dosya));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = dosyaReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
-				}
-				dosyaReader.close();
-				JsonObject gson = new Gson().fromJson(jsonstringbuilder.toString(), JsonObject.class);
-				if ((!gson.get("fall_damage").getAsBoolean())) {
-					if (dependencies.get("event") != null) {
-						Object _obj = dependencies.get("event");
-						if (_obj instanceof Event) {
-							Event _evt = (Event) _obj;
-							if (_evt.isCancelable())
-								_evt.setCanceled(true);
-						}
-					}
-					{
-						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
-						JsonObject gson = new JsonObject();
-						gson.addProperty("fall_damage", (true));
-						try {
-							FileWriter dosyafw = new FileWriter(dosya);
-							dosyafw.write(mainGSONBuilderVariable.toJson(gson));
-							dosyafw.close();
-						} catch (IOException exception) {
-							exception.printStackTrace();
-						}
+		if ((new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == FallDamagePotion.potion)
+							return true;
 					}
 				}
-			} catch (IOException e) {
-				e.printStackTrace();
+				return false;
+			}
+		}.check(entity))) {
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
+				}
+			}
+			if (entity instanceof LivingEntity) {
+				((LivingEntity) entity).removePotionEffect(FallDamagePotion.potion);
 			}
 		}
 	}
