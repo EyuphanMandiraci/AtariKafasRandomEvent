@@ -38,7 +38,7 @@ public class EventStartCommandExecutedProcedure extends AtarikafasRandomEventMod
 			}
 		}.getText());
 		AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer = (double) 2;
+		AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer = (double) 0;
 		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 	}
 }
