@@ -63,7 +63,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 1)) {
+		if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 0)) {
 			if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("lava_ceiling"))) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
