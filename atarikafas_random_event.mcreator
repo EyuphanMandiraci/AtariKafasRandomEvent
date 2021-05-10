@@ -364,6 +364,54 @@
           }
         ]
       }
+    },
+    {
+      "name": "ExtraHealth",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "extra_health",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Eventler/Good"
+    },
+    {
+      "name": "EventStartCommandExecuted",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "event_start_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EventStart",
+      "type": "command",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "event_start"
     }
   ],
   "variable_elements": [
@@ -372,12 +420,6 @@
       "type": "string",
       "scope": "map",
       "value": ""
-    },
-    {
-      "name": "event_bad",
-      "type": "logic",
-      "scope": "world",
-      "value": "false"
     },
     {
       "name": "event_second",
@@ -396,6 +438,12 @@
       "type": "number",
       "scope": "world",
       "value": "1800.0"
+    },
+    {
+      "name": "now_event",
+      "type": "string",
+      "scope": "map",
+      "value": ""
     }
   ],
   "sound_elements": [],
@@ -436,5 +484,5 @@
     "modElementsPackage": "com.atarikafa.randomevent",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100112313
+  "mcreatorVersion": 202100118117
 }

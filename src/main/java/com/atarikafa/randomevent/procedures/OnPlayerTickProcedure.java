@@ -221,6 +221,21 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nRichie Rich's Rain"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("extra_health"))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					ExtraHealthProcedure.executeProcedure($_dependencies);
+				}
+				if (!world.isRemote()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nNot at all!"),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
 			}
 		}
 	}
