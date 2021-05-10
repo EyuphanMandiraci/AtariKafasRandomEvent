@@ -412,6 +412,85 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "event_start"
+    },
+    {
+      "name": "Protection",
+      "type": "potion",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "protection"
+    },
+    {
+      "name": "WhenEntityAttacked",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "when_entity_attacked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProtectionEffect",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "protection_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Eventler/Good"
+    },
+    {
+      "name": "FlyButNoDamage",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fly_but_no_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Eventler/Good"
+    },
+    {
+      "name": "WhenEntityFalls",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "when_entity_falls",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -448,7 +527,13 @@
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "effect.protection": "Protection",
+      "item.minecraft.potion.effect.protection": "Protection",
+      "item.minecraft.splash_potion.effect.protection": "Splash Protection",
+      "item.minecraft.lingering_potion.effect.protection": "Lingering Protection",
+      "item.minecraft.tipped_arrow.effect.protection": "Arrow of Protection"
+    }
   },
   "foldersRoot": {
     "name": "~",

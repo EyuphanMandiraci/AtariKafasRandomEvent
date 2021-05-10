@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "command",
   "definition": {
-    "commandName": "event start",
+    "commandName": "eventstart",
     "permissionLevel": "No requirement",
     "onCommandExecuted": {
       "name": "EventStartCommandExecuted"

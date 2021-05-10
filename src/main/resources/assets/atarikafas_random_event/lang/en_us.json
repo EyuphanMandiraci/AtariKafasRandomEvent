@@ -1,1 +1,7 @@
-{}
+{
+  "effect.protection": "Protection",
+  "item.minecraft.potion.effect.protection": "Protection",
+  "item.minecraft.splash_potion.effect.protection": "Splash Protection",
+  "item.minecraft.lingering_potion.effect.protection": "Lingering Protection",
+  "item.minecraft.tipped_arrow.effect.protection": "Arrow of Protection"
+}

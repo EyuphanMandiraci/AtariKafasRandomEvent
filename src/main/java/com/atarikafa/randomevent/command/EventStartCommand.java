@@ -35,7 +35,7 @@ public class EventStartCommand extends AtarikafasRandomEventModElements.ModEleme
 	}
 
 	private LiteralArgumentBuilder<CommandSource> customCommand() {
-		return LiteralArgumentBuilder.<CommandSource>literal("event start")
+		return LiteralArgumentBuilder.<CommandSource>literal("eventstart")
 				.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(this::execute)).executes(this::execute);
 	}
 

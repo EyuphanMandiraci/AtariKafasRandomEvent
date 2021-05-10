@@ -236,6 +236,36 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nNot at all!"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("protection"))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					ProtectionEffectProcedure.executeProcedure($_dependencies);
+				}
+				if (!world.isRemote()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nPROTEGO MAXIMA!"),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("fly_but_no_damage"))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					FlyButNoDamageProcedure.executeProcedure($_dependencies);
+				}
+				if (!world.isRemote()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nI believe you can fly!"),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
 			}
 		}
 	}

@@ -33,9 +33,9 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 				.get(world).event_timer = (double) ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) - 1);
 		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 		AtarikafasRandomEventModVariables.WorldVariables
-				.get(world).event_second = (double) ((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) / 20);
+				.get(world).event_second = (double) (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) / 20) + 1);
 		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
-		event_number = (double) ((new Random()).nextInt((int) 10 + 1));
+		event_number = (double) ((new Random()).nextInt((int) 12 + 1));
 		if (((event_number) == 0)) {
 			AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "lava_ceiling";
 			AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
@@ -68,6 +68,12 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 			AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 		} else if (((event_number) == 10)) {
 			AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "extra_health";
+			AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
+		} else if (((event_number) == 11)) {
+			AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "protection";
+			AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
+		} else if (((event_number) == 12)) {
+			AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "fly_but_no_damage";
 			AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 		}
 		if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 0)) {
