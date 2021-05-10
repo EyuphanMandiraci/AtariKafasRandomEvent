@@ -131,5 +131,45 @@ public class BlockSuffocateProcedure extends AtarikafasRandomEventModElements.Mo
 			BlockState _bs = Blocks.SAND.getDefaultState();
 			world.setBlockState(_bp, _bs, 3);
 		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) z);
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) z);
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z + 1));
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z - 1));
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z + 1));
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z - 1));
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z - 1));
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z + 1));
+			BlockState _bs = Blocks.SAND.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
 	}
 }

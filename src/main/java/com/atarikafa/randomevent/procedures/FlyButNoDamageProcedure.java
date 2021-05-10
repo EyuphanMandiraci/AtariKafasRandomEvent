@@ -23,8 +23,8 @@ public class FlyButNoDamageProcedure extends AtarikafasRandomEventModElements.Mo
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.setMotion(0, 10, 0);
+		entity.setMotion(0, 8, 0);
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(FallDamagePotion.potion, (int) 10000000, (int) 1, (false), (false)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(FallDamagePotion.potion, (int) 10000000, (int) 0, (false), (false)));
 	}
 }

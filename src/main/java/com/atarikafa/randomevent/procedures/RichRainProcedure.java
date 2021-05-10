@@ -43,42 +43,32 @@ public class RichRainProcedure extends AtarikafasRandomEventModElements.ModEleme
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.DIAMOND, (int) (1)));
+			ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 10), z, new ItemStack(Items.DIAMOND, (int) (1)));
 			entityToSpawn.setPickupDelay((int) 10);
 			world.addEntity(entityToSpawn);
 		}
 		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.DIAMOND, (int) (1)));
+			ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 10), z, new ItemStack(Items.DIAMOND, (int) (1)));
 			entityToSpawn.setPickupDelay((int) 10);
 			world.addEntity(entityToSpawn);
 		}
 		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.DIAMOND, (int) (1)));
+			ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 10), z, new ItemStack(Items.DIAMOND, (int) (1)));
 			entityToSpawn.setPickupDelay((int) 10);
 			world.addEntity(entityToSpawn);
 		}
 		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.DIAMOND, (int) (1)));
+			ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 10), z, new ItemStack(Items.GOLD_INGOT, (int) (1)));
 			entityToSpawn.setPickupDelay((int) 10);
 			world.addEntity(entityToSpawn);
 		}
 		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.GOLD_INGOT, (int) (1)));
+			ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 10), z, new ItemStack(Items.GOLD_INGOT, (int) (1)));
 			entityToSpawn.setPickupDelay((int) 10);
 			world.addEntity(entityToSpawn);
 		}
 		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.GOLD_INGOT, (int) (1)));
-			entityToSpawn.setPickupDelay((int) 10);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.GOLD_INGOT, (int) (1)));
-			entityToSpawn.setPickupDelay((int) 10);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof World && !world.isRemote()) {
-			ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.GOLD_INGOT, (int) (1)));
+			ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 10), z, new ItemStack(Items.GOLD_INGOT, (int) (1)));
 			entityToSpawn.setPickupDelay((int) 10);
 			world.addEntity(entityToSpawn);
 		}

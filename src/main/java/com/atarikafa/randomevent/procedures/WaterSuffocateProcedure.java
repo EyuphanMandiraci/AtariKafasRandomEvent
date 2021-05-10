@@ -46,5 +46,10 @@ public class WaterSuffocateProcedure extends AtarikafasRandomEventModElements.Mo
 			BlockState _bs = Blocks.WATER.getDefaultState();
 			world.setBlockState(_bp, _bs, 3);
 		}
+		{
+			BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+			BlockState _bs = Blocks.WATER.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
 	}
 }

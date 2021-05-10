@@ -42,6 +42,11 @@ public class LavaCeilingProcedure extends AtarikafasRandomEventModElements.ModEl
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		{
+			BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+			BlockState _bs = Blocks.LAVA.getDefaultState();
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			BlockState _bs = Blocks.LAVA.getDefaultState();
 			world.setBlockState(_bp, _bs, 3);

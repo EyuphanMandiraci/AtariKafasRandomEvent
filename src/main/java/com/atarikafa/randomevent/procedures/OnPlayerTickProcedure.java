@@ -76,7 +76,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nLava Suffocate"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nLava Suffocate"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("zombie_raid"))) {
@@ -98,7 +98,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nZombie Raid"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nZombie Raid"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("water_suffocate"))) {
@@ -113,7 +113,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nWater Suffocate"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nWater Suffocate"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("block_suffocate"))) {
@@ -128,7 +128,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nBlock Suffocate"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nBlock Suffocate"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("kill_all"))) {
@@ -143,7 +143,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nKill ALL!"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nKill ALL!"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("swap_x_z"))) {
@@ -158,7 +158,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nSwap X and Z"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nSwap X and Z"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("go_to_space"))) {
@@ -173,7 +173,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nY + 250"), ChatType.SYSTEM,
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nY + 250"), ChatType.SYSTEM,
 								Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("anvil_fall"))) {
@@ -188,7 +188,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nAnvils Are Coming"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nAnvils Are Coming"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("give_diamond"))) {
@@ -203,7 +203,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nDiamonds To You!"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nDiamonds To You!"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("rich_rain"))) {
@@ -218,7 +218,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nRichie Rich's Rain"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nRichie Rich's Rain"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("extra_health"))) {
@@ -233,7 +233,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nNot at all!"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nNot at all!"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("protection"))) {
@@ -248,7 +248,7 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nPROTEGO MAXIMA!"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nPROTEGO MAXIMA!"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("fly_but_no_damage"))) {
@@ -263,7 +263,22 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A70\u00A7nI believe you can fly!"),
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nI believe you can fly!"),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("clear_random_slot"))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					ClearRandomSlotProcedure.executeProcedure($_dependencies);
+				}
+				if (!world.isRemote()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nThis item is unuseless."),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			}
