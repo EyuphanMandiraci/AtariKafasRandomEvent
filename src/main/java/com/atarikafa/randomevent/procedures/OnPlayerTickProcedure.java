@@ -344,6 +344,38 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 								new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nYou can use this but only for 30 seconds."),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("wolf_spawn"))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					WolfSpawnProcedure.executeProcedure($_dependencies);
+				}
+				if (!world.isRemote()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nBest Friends Forever!"),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("horse_spawn"))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					HorseSpawnProcedure.executeProcedure($_dependencies);
+				}
+				if (!world.isRemote()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nThe Best Horse!"),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
 			}
 		}
 	}
