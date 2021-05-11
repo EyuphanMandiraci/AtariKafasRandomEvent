@@ -1,15 +1,23 @@
 package com.atarikafa.randomevent.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
+import net.minecraftforge.items.ItemHandlerHelper;
+import net.minecraftforge.fml.server.ServerLifecycleHooks;
+
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.vector.Vector2f;
+import net.minecraft.util.text.ChatType;
+import net.minecraft.util.Util;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.ITag;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.command.ICommandSource;
-import net.minecraft.command.CommandSource;
 
+import java.util.Random;
 import java.util.Map;
 
 import com.atarikafa.randomevent.AtarikafasRandomEventModElements;
@@ -27,48 +35,32 @@ public class TestCommandExecutedProcedure extends AtarikafasRandomEventModElemen
 				AtarikafasRandomEventMod.LOGGER.warn("Failed to load dependency entity for procedure TestCommandExecuted!");
 			return;
 		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				AtarikafasRandomEventMod.LOGGER.warn("Failed to load dependency x for procedure TestCommandExecuted!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				AtarikafasRandomEventMod.LOGGER.warn("Failed to load dependency y for procedure TestCommandExecuted!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				AtarikafasRandomEventMod.LOGGER.warn("Failed to load dependency z for procedure TestCommandExecuted!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				AtarikafasRandomEventMod.LOGGER.warn("Failed to load dependency world for procedure TestCommandExecuted!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof ServerWorld) {
-			((World) world).getServer().getCommandManager().handleCommand(
-					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-					(("summon wolf ~ ~ ~ {Owner:") + "" + ((entity.getDisplayName().getString())) + "" + ("}")));
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack((new Object() {
+				public Item getRandomItem(String _tagName) {
+					ITag<Item> _tag = ItemTags.getCollection().getTagByID(new ResourceLocation(_tagName));
+					return _tag.getAllElements().isEmpty() ? Items.AIR : _tag.getRandomElement(new Random());
+				}
+			}.getRandomItem(("all").toLowerCase(java.util.Locale.ENGLISH))), (int) (1));
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 		}
-		if (world instanceof ServerWorld) {
-			((World) world).getServer().getCommandManager().handleCommand(
-					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-					(("summon wolf ~ ~ ~ {Owner:") + "" + ((entity.getDisplayName().getString())) + "" + ("}")));
-		}
-		if (world instanceof ServerWorld) {
-			((World) world).getServer().getCommandManager().handleCommand(
-					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-					(("summon wolf ~ ~ ~ {Owner:") + "" + ((entity.getDisplayName().getString())) + "" + ("}")));
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().func_232641_a_(new StringTextComponent(("" + ((new Object() {
+					public Item getRandomItem(String _tagName) {
+						ITag<Item> _tag = ItemTags.getCollection().getTagByID(new ResourceLocation(_tagName));
+						return _tag.getAllElements().isEmpty() ? Items.AIR : _tag.getRandomElement(new Random());
+					}
+				}.getRandomItem(("all").toLowerCase(java.util.Locale.ENGLISH)))))), ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 	}
 }

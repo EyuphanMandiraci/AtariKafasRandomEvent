@@ -376,6 +376,21 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nThe Best Horse!"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("charged_creeper"))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					ChargedCreeperProcedure.executeProcedure($_dependencies);
+				}
+				if (!world.isRemote()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nTHOR IS ANGRY!"),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
 			}
 		}
 	}
