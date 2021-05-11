@@ -1,12 +1,15 @@
 {
   "item.minecraft.potion.effect.fall_damage": "Fall Damage",
-  "effect.protection": "Protection",
   "item.minecraft.splash_potion.effect.fall_damage": "Splash Fall Damage",
-  "item.minecraft.potion.effect.protection": "Protection",
+  "item.atarikafas_random_event.fast_pickaxe": "Fast Axe",
   "item.minecraft.tipped_arrow.effect.fall_damage": "Arrow of Fall Damage",
-  "item.minecraft.splash_potion.effect.protection": "Splash Protection",
+  "item.atarikafas_random_event.ko_sword": "KO Sword",
   "item.minecraft.lingering_potion.effect.protection": "Lingering Protection",
-  "effect.fall_damage": "Fall Damage",
+  "item.minecraft.splash_potion.effect.protection": "Splash Protection",
   "item.minecraft.tipped_arrow.effect.protection": "Arrow of Protection",
-  "item.minecraft.lingering_potion.effect.fall_damage": "Lingering Fall Damage"
+  "item.minecraft.lingering_potion.effect.fall_damage": "Lingering Fall Damage",
+  "effect.protection": "Protection",
+  "item.atarikafas_random_event.fast_axe": "Fast Axe",
+  "item.minecraft.potion.effect.protection": "Protection",
+  "effect.fall_damage": "Fall Damage"
 }

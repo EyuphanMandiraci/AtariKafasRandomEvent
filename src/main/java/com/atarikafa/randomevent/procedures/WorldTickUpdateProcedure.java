@@ -40,7 +40,7 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 					.get(world).event_timer = (double) (AtarikafasRandomEventModVariables.WorldVariables.get(world).timer_default);
 			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 		} else if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 2)) {
-			event_number = (double) ((new Random()).nextInt((int) 14 + 1));
+			event_number = (double) ((new Random()).nextInt((int) 17 + 1));
 			if (((event_number) == 0)) {
 				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "lava_ceiling";
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
@@ -85,6 +85,15 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 			} else if (((event_number) == 14)) {
 				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "thunder";
+				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
+			} else if (((event_number) == 15)) {
+				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "fast_axe_30";
+				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
+			} else if (((event_number) == 16)) {
+				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "fast_pickaxe_30";
+				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
+			} else if (((event_number) == 17)) {
+				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "ko_sword_30";
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 			}
 		}

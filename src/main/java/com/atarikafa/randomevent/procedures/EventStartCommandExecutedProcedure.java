@@ -28,7 +28,7 @@ public class EventStartCommandExecutedProcedure extends AtarikafasRandomEventMod
 		}
 		HashMap cmdparams = (HashMap) dependencies.get("cmdparams");
 		IWorld world = (IWorld) dependencies.get("world");
-		AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) (new Object() {
+		if ((!(((new Object() {
 			public String getText() {
 				String param = (String) cmdparams.get("0");
 				if (param != null) {
@@ -36,9 +36,22 @@ public class EventStartCommandExecutedProcedure extends AtarikafasRandomEventMod
 				}
 				return "";
 			}
-		}.getText());
-		AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer = (double) 1;
-		AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+		}.getText())).equals(" ")))) {
+			AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) (new Object() {
+				public String getText() {
+					String param = (String) cmdparams.get("0");
+					if (param != null) {
+						return param;
+					}
+					return "";
+				}
+			}.getText());
+			AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer = (double) 1;
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+		} else {
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer = (double) 40;
+			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
+		}
 	}
 }

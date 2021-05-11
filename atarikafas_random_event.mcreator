@@ -548,6 +548,137 @@
         ]
       },
       "path": "~/Eventler/Bad"
+    },
+    {
+      "name": "PlayerGoesToBed",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "player_goes_to_bed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FastAxeToolInInventoryTick",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fast_axe_tool_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FastAxe",
+      "type": "tool",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fast_axe"
+    },
+    {
+      "name": "FastAxe30",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fast_axe_30",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Eventler/Good"
+    },
+    {
+      "name": "FastPickaxe",
+      "type": "tool",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fast_pickaxe"
+    },
+    {
+      "name": "KOSword",
+      "type": "tool",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ko_sword"
+    },
+    {
+      "name": "FastPickaxe30",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fast_pickaxe_30",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Eventler/Good"
+    },
+    {
+      "name": "KOSword30",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ko_sword_30",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Eventler/Good"
     }
   ],
   "variable_elements": [
@@ -586,15 +717,18 @@
   "language_map": {
     "en_us": {
       "item.minecraft.potion.effect.fall_damage": "Fall Damage",
-      "effect.protection": "Protection",
       "item.minecraft.splash_potion.effect.fall_damage": "Splash Fall Damage",
-      "item.minecraft.potion.effect.protection": "Protection",
+      "item.atarikafas_random_event.fast_pickaxe": "Fast Axe",
       "item.minecraft.tipped_arrow.effect.fall_damage": "Arrow of Fall Damage",
-      "item.minecraft.splash_potion.effect.protection": "Splash Protection",
+      "item.atarikafas_random_event.ko_sword": "KO Sword",
       "item.minecraft.lingering_potion.effect.protection": "Lingering Protection",
-      "effect.fall_damage": "Fall Damage",
+      "item.minecraft.splash_potion.effect.protection": "Splash Protection",
       "item.minecraft.tipped_arrow.effect.protection": "Arrow of Protection",
-      "item.minecraft.lingering_potion.effect.fall_damage": "Lingering Fall Damage"
+      "item.minecraft.lingering_potion.effect.fall_damage": "Lingering Fall Damage",
+      "effect.protection": "Protection",
+      "item.atarikafas_random_event.fast_axe": "Fast Axe",
+      "item.minecraft.potion.effect.protection": "Protection",
+      "effect.fall_damage": "Fall Damage"
     }
   },
   "foldersRoot": {

@@ -1,0 +1,32 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "fast_pickaxe",
+    "customModelName": "Normal",
+    "name": "Fast Axe",
+    "specialInfo": [
+      "But 30 seconds."
+    ],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 50,
+    "efficiency": 128000.0,
+    "attackSpeed": 50.0,
+    "enchantability": 2,
+    "damageVsEntity": 0.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "FastAxeToolInInventoryTick"
+    }
+  }
+}
