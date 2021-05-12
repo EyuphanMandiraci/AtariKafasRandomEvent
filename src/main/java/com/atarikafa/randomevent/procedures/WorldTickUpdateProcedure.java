@@ -40,7 +40,7 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 					.get(world).event_timer = (double) (AtarikafasRandomEventModVariables.WorldVariables.get(world).timer_default);
 			AtarikafasRandomEventModVariables.WorldVariables.get(world).syncData(world);
 		} else if (((AtarikafasRandomEventModVariables.WorldVariables.get(world).event_timer) == 2)) {
-			event_number = (double) ((new Random()).nextInt((int) 21 + 1));
+			event_number = (double) ((new Random()).nextInt((int) 20 + 1));
 			if (((event_number) == 0)) {
 				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "lava_ceiling";
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
@@ -54,7 +54,7 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "block_suffocate";
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 			} else if (((event_number) == 4)) {
-				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "kill_all";
+				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "have_the_midas_touch";
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 			} else if (((event_number) == 5)) {
 				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "swap_x_z";
@@ -103,9 +103,6 @@ public class WorldTickUpdateProcedure extends AtarikafasRandomEventModElements.M
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 			} else if (((event_number) == 20)) {
 				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "charged_creeper";
-				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
-			} else if (((event_number) == 21)) {
-				AtarikafasRandomEventModVariables.MapVariables.get(world).event = (String) "have_the_midas_touch";
 				AtarikafasRandomEventModVariables.MapVariables.get(world).syncData(world);
 			}
 		}

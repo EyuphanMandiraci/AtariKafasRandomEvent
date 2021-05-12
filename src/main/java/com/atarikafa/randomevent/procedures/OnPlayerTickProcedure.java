@@ -131,19 +131,20 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nBlock Suffocate"),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
-			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("kill_all"))) {
+			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("have_the_midas_touch"))) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("world", world);
+					$_dependencies.put("entity", entity);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					KillAllProcedure.executeProcedure($_dependencies);
+					HaveTheMidasTouchProcedure.executeProcedure($_dependencies);
 				}
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nKill ALL!"),
+						mcserv.getPlayerList().func_232641_a_(
+								new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nHave The Midas Touch! But only for 4 seconds."),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("swap_x_z"))) {
@@ -389,22 +390,6 @@ public class OnPlayerTickProcedure extends AtarikafasRandomEventModElements.ModE
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nTHOR IS ANGRY!"),
-								ChatType.SYSTEM, Util.DUMMY_UUID);
-				}
-			} else if ((((AtarikafasRandomEventModVariables.MapVariables.get(world).event)).equals("have_the_midas_touch"))) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					HaveTheMidasTouchProcedure.executeProcedure($_dependencies);
-				}
-				if (!world.isRemote()) {
-					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(
-								new StringTextComponent("\u00A76Started Event: \u00A7r\u00A7nHave The Midas Touch! But only for 4 seconds."),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			}

@@ -168,36 +168,6 @@
       "path": "~/Eventler/Bad"
     },
     {
-      "name": "KillAll",
-      "type": "procedure",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "kill_all",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Eventler/Bad"
-    },
-    {
       "name": "SwapXZ",
       "type": "procedure",
       "sortid": 10,
