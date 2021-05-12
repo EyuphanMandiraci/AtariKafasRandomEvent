@@ -48,6 +48,6 @@ public class AnvilFallProcedure extends AtarikafasRandomEventModElements.ModElem
 		world.setBlockState(new BlockPos((int) (x + 1), (int) (y + 25), (int) (z + 1)), Blocks.ANVIL.getDefaultState(), 3);
 		world.setBlockState(new BlockPos((int) (x - 1), (int) (y + 25), (int) (z - 1)), Blocks.ANVIL.getDefaultState(), 3);
 		world.setBlockState(new BlockPos((int) (x + 1), (int) (y + 25), (int) (z - 1)), Blocks.ANVIL.getDefaultState(), 3);
-		world.setBlockState(new BlockPos((int) (x + 1), (int) (y + 25), (int) (z + 1)), Blocks.ANVIL.getDefaultState(), 3);
+		world.setBlockState(new BlockPos((int) (x - 1), (int) (y + 25), (int) (z + 1)), Blocks.ANVIL.getDefaultState(), 3);
 	}
 }

@@ -858,7 +858,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/PotionEffects/Procedures"
     },
     {
       "name": "MidasTouch",
@@ -898,6 +899,36 @@
       "registry_name": "midas_touch_potion_expires",
       "metadata": {
         "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/PotionEffects/Procedures"
+    },
+    {
+      "name": "FallDamageOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fall_damage_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
           {
             "name": "world",
             "type": "world"
@@ -1005,7 +1036,12 @@
       },
       {
         "name": "PotionEffects",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       }
     ]
   },
