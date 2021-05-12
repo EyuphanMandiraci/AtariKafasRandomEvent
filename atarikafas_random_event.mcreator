@@ -706,8 +706,16 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -822,6 +830,80 @@
         ]
       },
       "path": "~/Eventler/Bad"
+    },
+    {
+      "name": "MidasTouchOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "midas_touch_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MidasTouch",
+      "type": "potion",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "midas_touch",
+      "path": "~/PotionEffects"
+    },
+    {
+      "name": "HaveTheMidasTouch",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "have_the_midas_touch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Eventler/Good"
+    },
+    {
+      "name": "MidasTouchPotionExpires",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "midas_touch_potion_expires",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -864,13 +946,18 @@
       "item.atarikafas_random_event.fast_pickaxe": "Fast Axe",
       "item.minecraft.tipped_arrow.effect.fall_damage": "Arrow of Fall Damage",
       "item.atarikafas_random_event.ko_sword": "KO Sword",
+      "item.minecraft.lingering_potion.effect.midas_touch": "Lingering Midas Touch",
       "item.minecraft.lingering_potion.effect.protection": "Lingering Protection",
       "item.minecraft.splash_potion.effect.protection": "Splash Protection",
       "item.minecraft.tipped_arrow.effect.protection": "Arrow of Protection",
+      "item.minecraft.potion.effect.midas_touch": "Midas Touch",
       "item.minecraft.lingering_potion.effect.fall_damage": "Lingering Fall Damage",
+      "item.minecraft.tipped_arrow.effect.midas_touch": "Arrow of Midas Touch",
       "effect.protection": "Protection",
       "item.atarikafas_random_event.fast_axe": "Fast Axe",
+      "item.minecraft.splash_potion.effect.midas_touch": "Splash Midas Touch",
       "item.minecraft.potion.effect.protection": "Protection",
+      "effect.midas_touch": "Midas Touch",
       "effect.fall_damage": "Fall Damage"
     }
   },

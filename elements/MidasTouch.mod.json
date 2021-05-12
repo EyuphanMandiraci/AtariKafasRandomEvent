@@ -1,0 +1,25 @@
+{
+  "_fv": 18,
+  "_type": "potion",
+  "definition": {
+    "name": "Midas Touch",
+    "effectName": "Midas Touch",
+    "icon": "resistance_je2_be2.png",
+    "color": {
+      "value": -16724788,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "registerPotionType": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onActiveTick": {
+      "name": "MidasTouchOnPotionActiveTick"
+    },
+    "onExpired": {
+      "name": "MidasTouchPotionExpires"
+    }
+  }
+}
